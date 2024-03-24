@@ -9,7 +9,7 @@ export const key: InjectionKey<Store<State>> = Symbol()
 
 export const store = createStore<State>({
   state: {
-    products: {}
+    count: 0,
   },
   mutations: {
     increment (state: State) {
