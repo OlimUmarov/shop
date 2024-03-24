@@ -1,0 +1,80 @@
+:root {
+    // font sizes
+    --font-size-h1: 96px;
+    --font-size-h2: 64px;
+    --font-size-h3: 41px;
+    --font-size-h4: 28px;
+    --font-size-h5: 24px;
+    --font-size-h6: 22px;
+    --font-size-xxxl: 20px;
+    --font-size-xxl: 18px;
+    --font-size-xl: 16px;
+    --font-size-l: 14px;
+
+    // brand colors
+    --shop-white: #FFFFFF;
+    --shop-black: #000000;
+    --shop-gray: #E6EFF5;
+    --shop-gray-light: #F5F5F5;
+    --shop-gray-dark: #B1B1B1;
+
+    // widths
+    --max-width-content: 1360px;
+    --max-width-xl: 1280px;
+    --max-width-lg: 1024px;
+    --max-width-md: 768px;
+    --max-width-sm: 425px;
+
+    // heights
+    --navbar-height: 70px;
+    --card-height: 410px;
+
+    // paddings
+    --padding-xxxl: 200px;
+    --padding-xxl: 150px;
+    --padding-xl: 100px;
+    --padding-lg: 50px;
+    --padding-base: 33px;
+    --padding-content: 25px;
+    --padding-m: 16px;
+    --padding-s: 10px;
+
+    // border
+    --border-lg: 98px;
+    --shop-border-main: 24px;
+
+    // z-index
+    --z-index-header: 50;
+}
+
+@media (max-width: 1360px) {
+    :root {
+        --font-size-h1: calc((100vw - 360px) / (1360 - 360) * (128 - 96) + 96px);
+        --font-size-h2: calc((100vw - 360px) / (1360 - 360) * (96 - 36) + 36px);
+        --font-size-h3: calc((100vw - 360px) / (1360 - 360) * (82 - 41) + 41px);
+        --font-size-h4: calc((100vw - 360px) / (1360 - 360) * (64 - 28) + 28px);
+        --font-size-h5: calc((100vw - 360px) / (1360 - 360) * (48 - 24) + 24px);
+        --font-size-h6: calc((100vw - 360px) / (1360 - 360) * (42 - 22) + 22px);
+        --font-size-xxxl: calc((100vw - 360px) / (1360 - 360) * (36 - 20) + 20px);
+        --font-size-xxl: calc((100vw - 360px) / (1360 - 360) * (32 - 20) + 20px);
+        --font-size-xl: calc((100vw - 360px) / (1360 - 360) * (28 - 16) + 16px);
+        --font-size-l: calc((100vw - 360px) / (1360 - 360) * (24 - 16) + 16px);
+        --font-size-m: calc((100vw - 360px) / (1360 - 360) * (20 - 14) + 14px);
+        --font-size-s: calc((100vw - 360px) / (1360 - 360) * (18 - 14) + 14px);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    :root {
+        --font-size-h1: 48px;
+        --font-size-h2: 36px;
+        --font-size-h4: 26px;
+        --font-size-h5: 24px;
+        --font-size-xxxl: 20px;
+        --font-size-xxl: 20px;
+        --font-size-xl: 16px;
+        --font-size-l: 16px;
+        --font-size-m: 14px;
+        --font-size-s: 14px;
+    }
+}

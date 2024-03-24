@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser"
+  },
+  "extends": [
+    "plugin:vue/strongly-recommended",
+    "eslint:recommended",
+    "@vue/typescript/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error", 
+      {
+        "singleQuote": true,
+        "parser": "flow",
+        "usePrettierrc": false,
+        "endOfLine": "off",
+        "printWidth": 120
+      }
+    ],
+    "vue/no-multiple-template-root": "off",
+    "quotes": ["error", "single"]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@", "./src"]
+        ],
+        "extensions": [".ts", ".js", ".jsx", ".json", ".vue"]
+      }
+    }
+  }
+}

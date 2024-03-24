@@ -1,0 +1,29 @@
+@import "reset";
+@import "variables/global";
+
+@font-face {
+  font-family: 'Geologica';
+  src: url('../assets/fonts/geologica/Geologica_Cursive-ExtraLight.ttf');
+}
+
+body {
+  font-family: 'Geologica', sans-serif;
+}
+
+section,
+footer {
+  padding: 0 var(--padding-content);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header,
+.main {
+  margin: 0;
+  padding: 0;
+}
