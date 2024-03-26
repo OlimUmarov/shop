@@ -58,7 +58,10 @@ const { id } = toRefs(props)
 const store = useStore();
 const imageUrl = ref('')
 
-const product = computed(() => store.state.product);
+const product = computed(() => {
+    console.log('data', store.state.product);
+    return store.state.product
+});
 
 watchEffect(() => {
     store.dispatch('getProduct', id.value);
@@ -67,7 +70,7 @@ watchEffect(() => {
 const { errors, handleSubmit, defineField } = useForm({
     validationSchema: schema,
     initialValues: {
-        model: product.value.title,
+        model: product ? product.value.title : '',
         releaseYear: '',
         category: '',
         price: '',
@@ -87,7 +90,6 @@ const [image, imageAttrs] = defineField('image');
 
 const onSubmit = handleSubmit(values => {
     alert(JSON.stringify(values, null, 2));
-    console.log(JSON.stringify(values, null, 2));
 });
 
 const options = Array.from({ length: 10000 }).map((_, idx) => ({
