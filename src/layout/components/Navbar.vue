@@ -1,5 +1,5 @@
 <template>
-    <el-menu default-active="2" class="el-menu-vertical">
+    <el-menu default-active="1" class="el-menu-vertical">
         <h1>Shop</h1>
         <router-link to="/products" class="menu-item-link">
             <el-menu-item index="1" class="menu-item">

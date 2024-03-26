@@ -7,11 +7,11 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-    "types": ["element-plus/global"],
+    "types": ["vuex"],
     },
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -24,6 +24,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src","node_modules"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue", "src","node_modules/vuex/types/index.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

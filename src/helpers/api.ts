@@ -1,16 +1,12 @@
 import axios from 'axios';
 
-declare const process: {
-    env: {
-      API_URL: string;
-    };
-  };
-
 let isRetry = false;
 
 export const $api = axios.create({
-  baseURL: process.env.API_URL,
-  withCredentials: true,
+  baseURL: 'https://dummyjson.com',
+  headers: {
+    'Content-Type': 'application/json'
+  },
 });
 
 
