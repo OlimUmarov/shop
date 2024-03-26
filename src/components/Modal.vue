@@ -1,5 +1,5 @@
 <template>
-    <el-dialog v-model="dialogVisible" title="Product" width="500" :before-close="handleClose">
+    <el-dialog v-model="dialogVisible" title="Product" width="500" :before-close="onCloseModal">
             <Form :id="id" />
         <template #footer>
             <div class="dialog-footer">

@@ -23,7 +23,6 @@ export const store = createStore<State>({
     },
     SET_PRODUCT(state: State, product: ProductType) {
       state.product = product;
-      console.log('data', product);
     },
   },
   actions: {
