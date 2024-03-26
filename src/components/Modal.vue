@@ -1,20 +1,11 @@
 <template>
-    <el-dialog v-model="dialogVisible" title="Product" width="500" :before-close="onCloseModal">
-            <Form :id="id" />
-        <template #footer>
-            <div class="dialog-footer">
-                <!-- <el-button @click="onCloseModal">Cancel</el-button>
-                <el-button type="primary" @click="onCloseModal">
-                    Confirm
-                </el-button> -->
-            </div>
-        </template>
+    <el-dialog v-model="dialogVisible" title="Product" width="500" :before-close="onClickModal">
+            <Form :id="id" :onClickModal="onClickModal" :show="show" />
     </el-dialog>
 </template>
 
 <script lang="ts" setup>
-import { ref, toRefs} from 'vue'
-import { ElMessageBox } from 'element-plus'
+import { ref, toRefs, watch} from 'vue'
 import Form from './Form.vue';
 
 const props = defineProps({
@@ -23,19 +14,17 @@ const props = defineProps({
         required: true
     },
     show: Boolean,
-    onCloseModal: Function,
+    onClickModal: {
+        type: Function,
+        required: true
+    },
 })
 
-const { id, show = false, onCloseModal } = toRefs(props)
-const dialogVisible = ref(show)
+const { id, show = false, onClickModal } = toRefs(props)
+const dialogVisible = ref(show);
 
-// const handleClose = (done: () => void) => {
-//     ElMessageBox.confirm('Are you sure to close this dialog?')
-//         .then(() => {
-//             done()
-//         })
-//         .catch(() => {
-//             // catch error
-//         })
-// }
+watch(id, () => {
+    console.log('id', id.value)
+});
+
 </script>

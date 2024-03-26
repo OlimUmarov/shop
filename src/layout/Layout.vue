@@ -15,10 +15,10 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import Navbar from './components/Navbar.vue';
 import Header from './components/Header.vue';
 
-import { ref } from 'vue';
 const navbar = ref(null);
 
 const updateNavBar = () => {
