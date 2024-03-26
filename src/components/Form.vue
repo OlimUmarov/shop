@@ -70,7 +70,7 @@ watchEffect(() => {
 const { errors, handleSubmit, defineField } = useForm({
     validationSchema: schema,
     initialValues: {
-        model: product ? product.value.title : '',
+        model: product.value ? product.value.title : '',
         releaseYear: '',
         category: '',
         price: '',
